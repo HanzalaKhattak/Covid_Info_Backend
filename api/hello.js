@@ -9,12 +9,8 @@ module.exports = async (req, res) => {
   }
 
   res.status(200).json({ 
-    message: "COVID Info Backend API", 
-    version: "1.0.0",
-    endpoints: [
-      "/api/hello",
-      "/api/getdonors",
-      "/api/getdata"
-    ]
+    message: "COVID Info Backend API is working!", 
+    timestamp: new Date().toISOString(),
+    environment: process.env.NODE_ENV || 'development'
   });
 };
