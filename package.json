@@ -1,0 +1,31 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "cd client && npm install",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "client1": "npm start --prefix client1",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "dev1": "concurrently \"npm run server\" \"npm run client1\""
+  },
+  "author": "Muhammad Sanan",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cloudinary": "^1.23.0",
+    "concurrently": "^5.3.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.4",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.4.16",
+    "nodemon": "^2.0.15"
+  }
+}
