@@ -670,12 +670,5 @@ process.on('uncaughtException', (error) => {
   // Don't exit the process, just log the error
 });
 
-// Don't start the server in serverless environment
-if (process.env.NODE_ENV !== 'production') {
-  app.listen(process.env.PORT || 3000, () => {
-    console.log("server is ON!")
-  });
-}
-
-// Export the app for Vercel
-module.exports = app;
+app.listen( process.env.PORT||3000,()=>{console.log("server is ON!")})
+// console.log(process.cwd())
