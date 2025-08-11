@@ -672,3 +672,6 @@ process.on('uncaughtException', (error) => {
 
 app.listen( process.env.PORT||3000,()=>{console.log("server is ON!")})
 // console.log(process.cwd())
+
+// Export the app for Vercel
+module.exports = app;
